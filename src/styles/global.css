@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", sans-serif;
+}
+
+.section-content {
+  @apply max-w-5xl mx-auto p-10;
+}
+
+.top-bar-links a {
+  @apply hover:text-black hover:underline transition-colors duration-300;
+}
