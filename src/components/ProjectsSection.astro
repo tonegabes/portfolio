@@ -1,3 +1,195 @@
-<div class="section-content">
-  <h1>...More In Progress...</h1>
-</div>
+<!-- Seção de Projetos Épica -->
+<section class="section-epic bg-gradient-to-br from-neutral-50 to-white relative overflow-hidden">
+  <!-- Background Pattern -->
+  <div class="absolute inset-0 opacity-5">
+    <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="project-grid" width="60" height="60" patternUnits="userSpaceOnUse">
+          <path d="M 60 0 L 0 0 0 60" fill="none" stroke="currentColor" stroke-width="1"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#project-grid)" />
+    </svg>
+  </div>
+
+  <div class="section-content relative z-10">
+    <!-- Header da Seção -->
+    <div class="text-center mb-16">
+      <div class="inline-flex items-center gap-2 px-4 py-2 bg-primary-50 border border-primary-200 rounded-full text-primary-700 text-sm font-medium mb-6">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+        </svg>
+        Trabalhos Selecionados
+      </div>
+
+      <h2 class="text-section mb-6">
+        Projetos que
+        <span class="gradient-text">fazem a diferença</span>
+      </h2>
+
+      <p class="text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed">
+        Uma seleção dos projetos mais impactantes que desenvolvi,
+        cada um resolvendo problemas reais com tecnologia e design excepcional.
+      </p>
+    </div>
+
+    <!-- Grid de Projetos -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+
+      <!-- Projeto 1 - Destaque -->
+      <div class="lg:col-span-2">
+        <div class="card-epic p-8 group overflow-hidden relative">
+          <!-- Badge de Destaque -->
+          <div class="absolute top-6 right-6 px-3 py-1 bg-gradient-to-r from-primary-500 to-accent-500 text-white text-xs font-semibold rounded-full">
+            🚀 Projeto Destaque
+          </div>
+
+          <div class="flex flex-col lg:flex-row gap-8 items-center">
+            <div class="flex-1">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-12 h-12 bg-gradient-to-br from-primary-500 to-accent-500 rounded-xl flex items-center justify-center">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-card text-neutral-900">Plataforma SaaS Completa</h3>
+                  <p class="text-neutral-500 text-sm">Laravel • React • Tailwind</p>
+                </div>
+              </div>
+
+              <p class="text-neutral-600 mb-6 leading-relaxed">
+                Sistema completo de gestão empresarial com dashboard interativo,
+                autenticação multi-nível e integrações com APIs externas.
+                Serving 10k+ usuários ativos com 99.9% uptime.
+              </p>
+
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded-full">Laravel</span>
+                <span class="px-3 py-1 bg-cyan-100 text-cyan-700 text-xs font-medium rounded-full">React</span>
+                <span class="px-3 py-1 bg-violet-100 text-violet-700 text-xs font-medium rounded-full">Livewire</span>
+                <span class="px-3 py-1 bg-green-100 text-green-700 text-xs font-medium rounded-full">MySQL</span>
+                <span class="px-3 py-1 bg-orange-100 text-orange-700 text-xs font-medium rounded-full">Redis</span>
+              </div>
+
+              <div class="flex gap-4">
+                <a href="#" class="btn-primary">
+                  <span>Ver Projeto</span>
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                  </svg>
+                </a>
+                <a href="#" class="btn-ghost">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                  </svg>
+                  <span>Código</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Mockup/Preview -->
+            <div class="flex-1">
+              <div class="relative group-hover:scale-105 transition-transform duration-500">
+                <div class="bg-gradient-to-br from-neutral-100 to-neutral-200 rounded-2xl p-8 aspect-video flex items-center justify-center">
+                  <div class="text-neutral-400 text-center">
+                    <svg class="w-16 h-16 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                    <p class="text-sm">Preview em desenvolvimento</p>
+                  </div>
+                </div>
+                <!-- Glow effect -->
+                <div class="absolute inset-0 bg-gradient-to-r from-primary-500/20 to-accent-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projeto 2 -->
+      <div class="card-epic p-6 group">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-neutral-900">E-commerce Premium</h3>
+            <p class="text-neutral-500 text-sm">Vue.js • Node.js • MongoDB</p>
+          </div>
+        </div>
+
+        <p class="text-neutral-600 mb-4 text-sm leading-relaxed">
+          Loja online completa com gateway de pagamento,
+          gestão de estoque e dashboard de vendas em tempo real.
+        </p>
+
+        <div class="flex flex-wrap gap-1 mb-4">
+          <span class="px-2 py-1 bg-green-100 text-green-700 text-xs rounded">Vue.js</span>
+          <span class="px-2 py-1 bg-yellow-100 text-yellow-700 text-xs rounded">Node.js</span>
+          <span class="px-2 py-1 bg-emerald-100 text-emerald-700 text-xs rounded">MongoDB</span>
+        </div>
+
+        <div class="flex gap-2">
+          <a href="#" class="flex-1 text-center py-2 bg-neutral-100 hover:bg-neutral-200 rounded-lg text-sm font-medium transition-colors duration-200">
+            Ver Projeto
+          </a>
+          <button class="p-2 bg-neutral-100 hover:bg-neutral-200 rounded-lg transition-colors duration-200">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Projeto 3 -->
+      <div class="card-epic p-6 group">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex items-center justify-center">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-neutral-900">Dashboard Analytics</h3>
+            <p class="text-neutral-500 text-sm">React • D3.js • Python</p>
+          </div>
+        </div>
+
+        <p class="text-neutral-600 mb-4 text-sm leading-relaxed">
+          Interface de analytics com visualizações interativas
+          e relatórios customizáveis para tomada de decisões.
+        </p>
+
+        <div class="flex flex-wrap gap-1 mb-4">
+          <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded">React</span>
+          <span class="px-2 py-1 bg-orange-100 text-orange-700 text-xs rounded">D3.js</span>
+          <span class="px-2 py-1 bg-green-100 text-green-700 text-xs rounded">Python</span>
+        </div>
+
+        <div class="flex gap-2">
+          <a href="#" class="flex-1 text-center py-2 bg-neutral-100 hover:bg-neutral-200 rounded-lg text-sm font-medium transition-colors duration-200">
+            Ver Projeto
+          </a>
+          <button class="p-2 bg-neutral-100 hover:bg-neutral-200 rounded-lg transition-colors duration-200">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA para ver todos os projetos -->
+    <div class="text-center">
+      <a href="/projects" class="btn-secondary group">
+        <span>Ver Todos os Projetos</span>
+        <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>

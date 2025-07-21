@@ -1,13 +1,398 @@
 @import "tailwindcss";
 
-@theme {
-  --font-sans: "Outfit", sans-serif;
+/* ========================================
+   🎨 DESIGN SYSTEM COMPATÍVEL - TONEGABES PORTFOLIO
+   ======================================== */
+
+:root {
+  /* 🎭 Tipografia */
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", Consolas, monospace;
+
+  /* 🌈 Paleta de Cores Simplificada */
+  --primary: #ef4444;
+  --primary-hover: #dc2626;
+  --primary-light: #fee2e2;
+
+  --accent: #0ea5e9;
+  --accent-hover: #0284c7;
+  --accent-light: #e0f2fe;
+
+  --neutral-50: #fafafa;
+  --neutral-100: #f5f5f5;
+  --neutral-200: #e5e5e5;
+  --neutral-300: #d4d4d4;
+  --neutral-400: #a3a3a3;
+  --neutral-500: #737373;
+  --neutral-600: #525252;
+  --neutral-700: #404040;
+  --neutral-800: #262626;
+  --neutral-900: #171717;
+
+  /* 🎯 Gradientes */
+  --gradient-hero: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-primary: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  --gradient-accent: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+}
+
+/* ========================================
+   🎪 CLASSES UTILITÁRIAS ÉPICAS
+   ======================================== */
+
+/* Container principal responsivo */
+.container-epic {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container-epic {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-epic {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Seções com espaçamento épico */
+.section-epic {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+  .section-epic {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-epic {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
 }
 
 .section-content {
-  @apply max-w-5xl mx-auto p-10;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
-.top-bar-links a {
-  @apply hover:text-black hover:underline transition-colors duration-300;
+@media (min-width: 640px) {
+  .section-content {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-content {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Gradientes reutilizáveis */
+.gradient-hero {
+  background: var(--gradient-hero);
+}
+
+.gradient-primary {
+  background: var(--gradient-primary);
+}
+
+.gradient-accent {
+  background: var(--gradient-accent);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* Botões épicos */
+.btn-epic {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  transform: scale(1);
+}
+
+.btn-epic:hover {
+  transform: scale(1.05);
+}
+
+.btn-epic:active {
+  transform: scale(0.95);
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background-color: var(--primary);
+  color: white;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  transform: scale(1.05);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background-color: white;
+  color: var(--neutral-900);
+  border: 1px solid var(--neutral-200);
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.btn-secondary:hover {
+  border-color: var(--neutral-300);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  transform: scale(1.05);
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  color: var(--neutral-600);
+}
+
+.btn-ghost:hover {
+  color: var(--neutral-900);
+  background-color: var(--neutral-50);
+  transform: scale(1.05);
+}
+
+/* Cards épicos */
+.card-epic {
+  background-color: white;
+  border-radius: 1rem;
+  border: 1px solid rgba(229, 229, 229, 0.5);
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  transition: all 0.5s ease;
+}
+
+.card-epic:hover {
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  transform: translateY(-0.25rem);
+}
+
+/* Texto hierárquico */
+.text-hero {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+@media (min-width: 768px) {
+  .text-hero {
+    font-size: 3.75rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .text-hero {
+    font-size: 4.5rem;
+  }
+}
+
+.text-section {
+  font-size: 1.875rem;
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .text-section {
+    font-size: 2.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .text-section {
+    font-size: 3rem;
+  }
+}
+
+.text-card {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .text-card {
+    font-size: 1.5rem;
+  }
+}
+
+/* Links épicos */
+.link-epic {
+  color: var(--primary);
+  transition: color 0.2s ease;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+.link-epic:hover {
+  color: var(--primary-hover);
+}
+
+/* Navegação moderna */
+.nav-link {
+  color: var(--neutral-600);
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--neutral-900);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary);
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Glassmorphism */
+.glass {
+  backdrop-filter: blur(12px);
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Estados de loading */
+.loading-skeleton {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  background-color: var(--neutral-200);
+  border-radius: 0.25rem;
+}
+
+/* ========================================
+   🌐 RESPONSIVIDADE ÉPICA
+   ======================================== */
+
+/* Mobile First - otimizado para touch */
+@media (max-width: 640px) {
+  .section-epic {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .text-hero {
+    font-size: 2.25rem;
+  }
+}
+
+/* ========================================
+   ⚡ PERFORMANCE & ACESSIBILIDADE
+   ======================================== */
+
+/* Reduzir animações para usuarios com preferência */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Melhor contraste para alto contraste */
+@media (prefers-contrast: high) {
+  .btn-primary {
+    background-color: var(--neutral-900);
+    border: 2px solid var(--neutral-900);
+  }
+}
+
+/* Dark mode preparation */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+  }
+}
+
+/* ========================================
+   🎭 SCROLL BEHAVIOR ÉPICO
+   ======================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--neutral-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--neutral-400);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--neutral-500);
+}
+
+/* Keyframe animations */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
 }

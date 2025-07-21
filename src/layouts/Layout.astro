@@ -5,10 +5,29 @@ import "../styles/global.css";
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <Head />
-  <body class="flex flex-col bg-gray-50 min-h-dvh">
-    <slot />
-    <Footer />
+  <body class="min-h-screen bg-gradient-to-br from-neutral-50 via-white to-neutral-100 antialiased">
+    <!-- Background Pattern Épico -->
+    <div class="fixed inset-0 -z-10 overflow-hidden">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(239,68,68,0.1),transparent_50%)]"></div>
+      <div class="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-r from-primary-500/20 to-accent-500/20 rounded-full blur-3xl animate-pulse"></div>
+      <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-l from-accent-500/20 to-primary-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      <!-- Grid Pattern Sutil -->
+      <svg class="absolute inset-0 w-full h-full opacity-[0.02]" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+            <path d="M 32 0 L 0 0 0 32" fill="none" stroke="currentColor" stroke-width="1"/>
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#grid)" />
+      </svg>
+    </div>
+
+    <!-- Conteúdo Principal -->
+    <div class="relative flex flex-col min-h-screen">
+      <slot />
+      <Footer />
+    </div>
   </body>
 </html>
