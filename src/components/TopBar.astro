@@ -1,12 +1,13 @@
 ---
+import Logomark from "./Logomark.astro";
 import Middot from "./Middot.astro";
 ---
 
 <div
-  class="flex justify-between items-center px-10 py-4 border-b border-gray-200/50"
+  class="flex bg-color-section m-1 rounded-lg justify-between items-center p-6 border-b border-gray-200/50 app-section-hover"
 >
-  <span class="font-bold font-mono text-2xl uppercase">TG</span>
-  <nav class="flex gap-4 text-gray-500 text-sm lowercase">
+  <Logomark size={32} />
+  <nav class="flex gap-4 text-gray-500 mr-4 lowercase">
     <a
       href="/"
       class="hover:text-black hover:underline transition-colors duration-300"

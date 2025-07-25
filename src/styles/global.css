@@ -4,6 +4,22 @@
   --font-sans: "Outfit", sans-serif;
 }
 
+.app-section-hover {
+  @apply hover:scale-[0.99] ease-out transition-all duration-100;
+}
+
+.app-rounded-default {
+  @apply rounded-lg;
+}
+
+.bg-color-app {
+  @apply bg-zinc-800;
+}
+
+.bg-color-section {
+  @apply bg-zinc-200;
+}
+
 .section-content {
   @apply max-w-5xl mx-auto p-10;
 }
