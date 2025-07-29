@@ -3,39 +3,44 @@ import Logomark from "./Logomark.astro";
 import Middot from "./Middot.astro";
 ---
 
-<div
-  class="flex bg-color-section m-1 rounded-lg justify-between items-center p-6 border-b border-gray-200/50 app-section-hover"
->
-  <Logomark size={32} />
-  <nav class="flex gap-4 text-gray-500 mr-4 lowercase">
-    <a
-      href="/"
-      class="hover:text-black hover:underline transition-colors duration-300"
-      >home</a
-    >
-    <Middot />
-    <a
-      href="/about"
-      class="hover:text-black hover:underline transition-colors duration-300"
-      >about</a
-    >
-    <Middot />
-    <a
-      href="/contact"
-      class="hover:text-black hover:underline transition-colors duration-300"
-      >contact</a
-    >
-    <Middot />
-    <a
-      href="/projects"
-      class="hover:text-black hover:underline transition-colors duration-300"
-      >projects</a
-    >
-    <Middot />
-    <a
-      href="/blog"
-      class="hover:text-black hover:underline transition-colors duration-300"
-      >blog</a
-    >
-  </nav>
+<div class="flex justify-between items-center p-4">
+  <div class="flex items-center gap-10">
+    <Logomark size={32} />
+    <nav class="flex gap-4 text-gray-500 lowercase">
+      <a
+        href="/"
+        class="hover:text-black hover:underline transition-colors duration-300"
+        >home</a
+      >
+      <Middot />
+      <a
+        href="/about"
+        class="hover:text-black hover:underline transition-colors duration-300"
+        >about</a
+      >
+      <Middot />
+      <a
+        href="/contact"
+        class="hover:text-black hover:underline transition-colors duration-300"
+        >contact</a
+      >
+      <Middot />
+      <a
+        href="/projects"
+        class="hover:text-black hover:underline transition-colors duration-300"
+        >projects</a
+      >
+      <Middot />
+      <a
+        href="/blog"
+        class="hover:text-black hover:underline transition-colors duration-300"
+        >blog</a
+      >
+    </nav>
+  </div>
+
+  <a
+    href="mailto:tonegabes@gmail.com"
+    class="bg-rose-500 text-white px-4 py-2 rounded-md">Get in touch</a
+  >
 </div>

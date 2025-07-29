@@ -13,11 +13,11 @@
 }
 
 .bg-color-app {
-  @apply bg-zinc-800;
+  @apply bg-gray-100;
 }
 
 .bg-color-section {
-  @apply bg-zinc-200;
+  @apply bg-gray-200/50;
 }
 
 .section-content {
