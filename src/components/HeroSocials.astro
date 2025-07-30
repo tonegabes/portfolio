@@ -1,38 +1,39 @@
-<nav class="flex gap-2 mt-4">
-  <a
-    href="https://www.linkedin.com/in/tonegabes/"
-    class="border border-gray-400 px-4 py-2 hover:bg-gray-900 hover:text-gray-50 rounded-md transition-all duration-300 flex items-center gap-4"
-  >
-    <i class="ph-light ph-linkedin-logo text-xl"></i>
-    LinkedIn
-  </a>
-  <a
-    href="https://www.behance.net/tonegabes"
-    class="border border-gray-400 px-4 py-2 hover:bg-gray-900 hover:text-gray-50 rounded-md transition-all duration-300 flex items-center gap-4"
-  >
-    <i class="ph-light ph-behance-logo text-xl"></i>
-    Behance
-  </a>
+---
+import SocialButton from "./SocialButton.astro";
 
-  <a
-    href="https://www.github.com/tonegabes"
-    class="border border-gray-400 px-4 py-2 hover:bg-gray-900 hover:text-gray-50 rounded-md transition-all duration-300 flex items-center gap-4"
-  >
-    <i class="ph-light ph-github-logo text-xl"></i>
-    GitHub
-  </a>
-  <a
-    href="https://www.twitter.com/tonegabes"
-    class="border border-gray-400 px-4 py-2 hover:bg-gray-900 hover:text-gray-50 rounded-md transition-all duration-300 flex items-center gap-4"
-  >
-    <i class="ph-light ph-twitter-logo text-xl"></i>
-    Twitter
-  </a>
-  <a
-    href="https://www.instagram.com/tonegabes"
-    class="border border-gray-400 px-4 py-2 hover:bg-gray-900 hover:text-gray-50 rounded-md transition-all duration-300 flex items-center gap-4"
-  >
-    <i class="ph-light ph-instagram-logo text-xl"></i>
-    Instagram
-  </a>
+const socials = [
+  {
+    href: "https://www.linkedin.com/in/tonegabes/",
+    icon: "ph-linkedin-logo",
+    text: "LinkedIn",
+  },
+  {
+    href: "https://www.behance.net/tonegabes",
+    icon: "ph-behance-logo",
+    text: "Behance",
+  },
+  {
+    href: "https://www.github.com/tonegabes",
+    icon: "ph-github-logo",
+    text: "GitHub",
+  },
+  {
+    href: "https://www.twitter.com/tonegabes",
+    icon: "ph-twitter-logo",
+    text: "Twitter",
+  },
+  {
+    href: "https://www.instagram.com/tonegabes",
+    icon: "ph-instagram-logo",
+    text: "Instagram",
+  },
+];
+---
+
+<nav class="flex gap-2">
+  {
+    socials.map((social) => (
+      <SocialButton href={social.href} icon={social.icon} text={social.text} />
+    ))
+  }
 </nav>

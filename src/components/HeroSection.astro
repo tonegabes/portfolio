@@ -4,11 +4,9 @@ import HeroImage from "../assets/heroimage.jpg";
 import HeroSocials from "./HeroSocials.astro";
 ---
 
-<div class="flex flex-col gap-1 max-w-7xl mx-auto w-fit mt-10">
-  <div class="flex gap-4">
-    <div
-      class="bg-color-section flex app-section-hover w-2/3 app-rounded-default"
-    >
+<div class="flex gap-4 max-w-7xl mx-auto w-fit mt-10">
+  <div class="flex flex-col gap-2 w-2/3">
+    <div class="section-bg-color flex grow app-rounded-default">
       <div class="flex flex-col gap-4 m-auto max-w-2xl">
         <h1 class="text-4xl font-bold">
           I'm <span class="text-rose-500">Tone Gabes</span>. I build interactive
@@ -22,14 +20,14 @@ import HeroSocials from "./HeroSocials.astro";
       </div>
     </div>
 
-    <div class="aspect-square w-1/3">
-      <Image
-        src={HeroImage}
-        alt="Hero Image"
-        class="w-full h-full object-cover app-rounded-default"
-      />
-    </div>
+    <HeroSocials />
   </div>
 
-  <HeroSocials />
+  <div class="aspect-square w-1/3">
+    <Image
+      src={HeroImage}
+      alt="Hero Image"
+      class="w-full h-full object-cover app-rounded-default"
+    />
+  </div>
 </div>

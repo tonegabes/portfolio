@@ -1,0 +1,25 @@
+---
+interface Props {
+  href: string;
+  icon: string;
+  text: string;
+}
+
+const { href, icon, text }: Props = Astro.props;
+---
+
+<a
+  href={href}
+  class="justify-between grow social-btn-bg-color px-4 py-2 hover:text-gray-50 app-rounded-default transition-all duration-300 flex items-center gap-4 group"
+  target="_blank"
+>
+  {text}
+  <div class="">
+    <i
+      class={`ph-light ${icon} block text-xl transition-all duration-300 group-hover:hidden`}
+    ></i>
+    <i
+      class={`ph-light hidden ph-arrow-up-right text-xl transition-all duration-300 group-hover:block`}
+    ></i>
+  </div>
+</a>

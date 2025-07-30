@@ -2,28 +2,36 @@
 
 @theme {
   --font-sans: "Outfit", sans-serif;
+  --section-bg-color: var(--color-gray-200);
 }
 
-.app-section-hover {
-  @apply hover:scale-[0.99] ease-out transition-all duration-100;
+/* App */
+.app-bg-color {
+  @apply bg-gray-100;
 }
 
 .app-rounded-default {
   @apply rounded-lg;
 }
 
-.bg-color-app {
-  @apply bg-gray-100;
+/* Section */
+.section-bg-color {
+  background-color: var(--section-bg-color);
 }
-
-.bg-color-section {
-  @apply bg-gray-200/50;
-}
-
 .section-content {
   @apply max-w-5xl mx-auto p-10;
 }
+.section-hover {
+  @apply hover:scale-[0.99] ease-out transition-all duration-100;
+}
 
+/* Social Button */
+.social-btn-bg-color {
+  background-color: var(--section-bg-color);
+  @apply hover:bg-black;
+}
+
+/* Top Bar */
 .top-bar-links a {
   @apply hover:text-black hover:underline transition-colors duration-300;
 }
