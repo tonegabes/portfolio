@@ -28,7 +28,6 @@
 /* Social Button */
 .social-btn-bg-color {
   background-color: var(--section-bg-color);
-  @apply hover:bg-black;
 }
 
 /* Top Bar */
