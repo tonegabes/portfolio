@@ -1,25 +1,46 @@
 ---
-const title = "Tonegabes";
-const description = "Tonegabes is a blog about music and technology.";
+const title = "Tonegabes — Portfolio";
+const description = "Full-stack developer building interactive platforms with Laravel and JavaScript.";
+const site = "https://tonegabes.com";
 ---
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <meta name="generator" content={Astro.generator} />
   <title>{title}</title>
   <meta name="description" content={description} />
-  <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
-    rel="stylesheet"
-  />
+  <link rel="canonical" href={site} />
   <link
     rel="stylesheet"
     type="text/css"
     href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/light/style.css"
   />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={site} />
+  <meta property="og:image" content={`${site}/favicon.svg`} />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={`${site}/favicon.svg`} />
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Tone Gabes',
+    url: 'https://tonegabes.com',
+    sameAs: [
+      'https://www.linkedin.com/in/tonegabes/',
+      'https://www.github.com/tonegabes'
+    ],
+    jobTitle: 'FullStack Developer'
+  })}
+  </script>
 </head>

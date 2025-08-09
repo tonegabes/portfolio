@@ -6,36 +6,16 @@ import Middot from "./Middot.astro";
 <div class="flex justify-between items-center p-4">
   <div class="flex items-center gap-10">
     <Logomark size={32} />
-    <nav class="flex gap-4 text-gray-500 lowercase">
-      <a
-        href="/"
-        class="hover:text-black hover:underline transition-colors duration-300"
-        >home</a
-      >
+    <nav class="top-bar-links flex gap-4 text-gray-500 lowercase" aria-label="Main navigation">
+      <a href="/">home</a>
       <Middot />
-      <a
-        href="/about"
-        class="hover:text-black hover:underline transition-colors duration-300"
-        >about</a
-      >
+      <a href="#about">about</a>
       <Middot />
-      <a
-        href="/contact"
-        class="hover:text-black hover:underline transition-colors duration-300"
-        >contact</a
-      >
+      <a href="#contact">contact</a>
       <Middot />
-      <a
-        href="/projects"
-        class="hover:text-black hover:underline transition-colors duration-300"
-        >projects</a
-      >
+      <a href="#projects">projects</a>
       <Middot />
-      <a
-        href="/blog"
-        class="hover:text-black hover:underline transition-colors duration-300"
-        >blog</a
-      >
+      <a href="#blog">blog</a>
     </nav>
   </div>
 
