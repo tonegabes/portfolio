@@ -3,24 +3,24 @@ import Logomark from "./Logomark.astro";
 import Middot from "./Middot.astro";
 ---
 
-<div class="flex justify-between items-center p-4">
+<div class="flex justify-between items-center p-4 reveal">
   <div class="flex items-center gap-10">
     <Logomark size={32} />
-    <nav class="top-bar-links flex gap-4 text-gray-500 lowercase" aria-label="Main navigation">
-      <a href="/">home</a>
+    <nav class="top-bar-links flex gap-4 text-gray-500 lowercase" aria-label="Navegação principal">
+      <a href="/">início</a>
       <Middot />
-      <a href="#about">about</a>
+      <a href="#about">sobre</a>
       <Middot />
-      <a href="#contact">contact</a>
+      <a href="#contact">contato</a>
       <Middot />
-      <a href="#projects">projects</a>
+      <a href="#projects">projetos</a>
       <Middot />
       <a href="#blog">blog</a>
     </nav>
   </div>
 
-  <a
-    href="mailto:tonegabes@gmail.com"
-    class="bg-rose-500 text-white px-4 py-2 rounded-md">Get in touch</a
-  >
+  <a href="mailto:tonegabes@gmail.com" class="btn-primary hover-lift">
+    <i class="ph-light ph-paper-plane-tilt text-lg"></i>
+    Get in touch
+  </a>
 </div>

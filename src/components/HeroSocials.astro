@@ -30,7 +30,7 @@ const socials = [
 ];
 ---
 
-<nav class="flex gap-2">
+<nav class="flex gap-2" aria-label="Redes sociais">
   {
     socials.map((social) => (
       <SocialButton href={social.href} icon={social.icon} text={social.text} />
