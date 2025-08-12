@@ -39,3 +39,42 @@
 .top-bar-links a {
   @apply hover:text-black hover:underline transition-colors duration-300;
 }
+
+/* In-Progress Page Aurora */
+.aurora-bg {
+  position: relative;
+  isolation: isolate;
+}
+.aurora-bg::before {
+  content: "";
+  position: absolute;
+  inset: -20%;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(60% 45% at 15% 10%, rgba(251, 191, 36, 0.35), transparent 60%),
+    radial-gradient(50% 40% at 85% 20%, rgba(59, 130, 246, 0.30), transparent 60%),
+    radial-gradient(55% 50% at 30% 85%, rgba(236, 72, 153, 0.25), transparent 60%),
+    radial-gradient(45% 45% at 75% 75%, rgba(34, 197, 94, 0.20), transparent 60%);
+  filter: blur(48px);
+  opacity: 0.8;
+  transform: translate3d(0, 0, 0);
+  animation: auroraShift 18s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+@keyframes auroraShift {
+  0% {
+    transform: translate3d(-2%, -2%, 0) rotate(0.5deg) scale(1.02);
+  }
+  50% {
+    transform: translate3d(2%, 1%, 0) rotate(-0.4deg) scale(1.03);
+  }
+  100% {
+    transform: translate3d(-1%, 2%, 0) rotate(0.3deg) scale(1.01);
+  }
+}
+
+.glow-primary {
+  text-shadow: 0 0 24px rgba(251, 191, 36, 0.5), 0 0 8px rgba(251, 191, 36, 0.35);
+}
