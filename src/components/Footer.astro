@@ -1,4 +1,22 @@
-<footer role="contentinfo" class="bg-black text-white p-4 flex justify-between items-center">
-  <span>Tonegabes</span>
-  <span>© 2025 Tonegabes</span>
-</footer>
+---
+const version = "1.0.0";
+---
+
+<div class="relative">
+  <!-- Canto superior esquerdo -->
+  <div
+    aria-hidden="true"
+    class="pointer-events-none absolute -top-4 left-0 h-8 w-8 bg-black [mask-image:radial-gradient(circle_at_100%_100%,black_70%,transparent_71%)] [-webkit-mask-image:radial-gradient(circle_at_100%_100%,black_70%,transparent_71%)] [mask-size:100%_100%] [mask-repeat:no-repeat]"
+  ></div>
+
+  <!-- Canto superior direito -->
+  <div
+    aria-hidden="true"
+    class="pointer-events-none absolute -top-4 right-0 h-8 w-8 bg-black [mask-image:radial-gradient(circle_at_0%_100%,black_70%,transparent_71%)] [-webkit-mask-image:radial-gradient(circle_at_0%_100%,black_70%,transparent_71%)] [mask-size:100%_100%] [mask-repeat:no-repeat]"
+  ></div>
+
+  <footer role="contentinfo" class="bg-black text-white font-thin tracking-wider p-4 flex justify-between items-center">
+    <span class="flex items-center gap-2">© 2025 Tonegabes - Built with <i class="ph-light ph-heart text-primary"></i> Love and <i class="ph-light ph-coffee text-primary"></i> Coffee.</span>
+    <span class="text-white/50">Version {version}</span>
+  </footer>
+</div>
