@@ -4,6 +4,7 @@
 @theme {
   --font-sans: "Outfit", sans-serif;
   --section-bg-color: var(--color-gray-200);
+  --color-primary: var(--color-amber-300);
 }
 
 /* App */
@@ -29,6 +30,9 @@
 /* Social Button */
 .social-btn-bg-color {
   background-color: var(--section-bg-color);
+}
+.social-btn-bg-color:hover {
+  @apply bg-primary;
 }
 
 /* Top Bar */

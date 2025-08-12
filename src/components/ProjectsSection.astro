@@ -1,11 +1,44 @@
+---
+
+const projects = [
+  {
+    title: "I Code",
+    description: "Apps and websites built with Laravel, JavaScript and modern frameworks.",
+    icon: "ph-code",
+    cta: "View Projects",
+  },
+  {
+    title: "I Design",
+    description: "Beautiful, functional designs for web and mobile.",
+    icon: "ph-palette",
+    cta: "View Designs",
+  },
+  {
+    title: "I Write",
+    description: "Blog posts and tutorials on web development and design.",
+    icon: "ph-pen-nib",
+    cta: "View Blog",
+  },
+];
+---
+
 <section id="projects" class="m-4 grid grid-cols-1 md:grid-cols-3 gap-4 grow w-auto" aria-label="Areas of work">
-  <div class="flex flex-col gap-4 bg-black/90 app-rounded-default hover:bg-black p-10">
-    <h1 class="text-4xl font-bold text-white/50">I Code</h1>
-  </div>
-  <div class="flex flex-col gap-4 bg-black/90 app-rounded-default hover:bg-black p-10">
-    <h1 class="text-4xl font-bold text-white/50">I Design</h1>
-  </div>
-  <div class="flex flex-col gap-4 h-full bg-black/90 app-rounded-default hover:bg-black p-10">
-    <h1 class="text-4xl font-bold text-white/50">I Write</h1>
-  </div>
+
+  {
+    projects.map((project) => (
+      <div class="flex flex-col justify-between gap-4 group bg-black/90 app-rounded-default hover:bg-black p-10">
+        <div class="flex flex-col gap-4">
+          <div class="flex items-center gap-4">
+            <i class={`ph-light ${project.icon} text-white/50 text-4xl group-hover:animate-pulse`}></i>
+            <h1 class="text-4xl font-bold text-white">{project.title}</h1>
+          </div>
+          <p class="text-white/50">{project.description}</p>
+        </div>
+        <a href="#" class="text-primary flex items-center gap-2 group-hover:animate-pulse group-hover:gap-4 transition-all duration-300">
+          <span>{project.cta}</span>
+          <i class="ph-light ph-arrow-right text-xl transition-all duration-300 group-hover:block"></i>
+        </a>
+      </div>
+    ))
+  }
 </section>

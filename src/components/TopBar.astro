@@ -5,7 +5,9 @@ import Middot from "./Middot.astro";
 
 <div class="flex justify-between items-center p-4">
   <div class="flex items-center gap-10">
-    <Logomark size={32} />
+    <a href="/" class="hover:animate-pulse">
+      <Logomark size={32} />
+    </a>
     <nav class="top-bar-links flex gap-4 text-gray-500 lowercase" aria-label="Main navigation">
       <a href="/">home</a>
       <Middot />
@@ -21,6 +23,9 @@ import Middot from "./Middot.astro";
 
   <a
     href="mailto:tonegabes@gmail.com"
-    class="bg-rose-500 text-white px-4 py-2 rounded-md">Get in touch</a
+    class="bg-black text-primary flex px-4 gap-4 items-center group py-2 rounded-md">
+      <i class="ph-light ph-paper-plane-right group-hover:-rotate-45 text-xl transition-all ease-in-out duration-300 group-hover:block"></i>
+      <span>Get in touch</span>
+  </a
   >
 </div>

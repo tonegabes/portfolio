@@ -10,18 +10,18 @@ const { href, icon, text }: Props = Astro.props;
 
 <a
   href={href}
-  class="justify-between grow social-btn-bg-color px-4 py-2 app-rounded-default transition-all duration-300 flex items-center gap-4 group hover:ring-2 hover:ring-black"
+  class="justify-between grow social-btn-bg-color px-4 py-2 app-rounded-default transition-all duration-300 flex items-center gap-4 group"
   target="_blank"
   rel="noopener noreferrer"
   aria-label={`Open ${text} in a new tab`}
 >
   {text}
-  <div class="">
+  <div class="flex items-center gap-2 group-hover:flex-row-reverse transition-all duration-300">
     <i
-      class={`ph-light ${icon} block text-xl transition-all duration-300 group-hover:hidden`}
+      class={`ph-light text-[0px] ph-arrow-up-right transition-all ease-in-out duration-300 group-hover:text-xl`}
     ></i>
     <i
-      class={`ph-light hidden ph-arrow-up-right text-xl transition-all duration-300 group-hover:block`}
+      class={`ph-light ${icon} block text-xl transition-all ease-in-out duration-300 group-hover:text-[0px]`}
     ></i>
   </div>
 </a>
